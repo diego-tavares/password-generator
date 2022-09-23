@@ -84,17 +84,46 @@ input {
     margin:10px 15px;
 }
 
+.str-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .strenght {
     background-color: blueviolet;
-    width: 80%;
-    height: 50px;
+    width: 90%;
+    height: 60px;
     margin-top: 45px;
     display: flex;
     justify-content: space-around;
     font-size: 25px;
-    
+    align-items: center;
+    border-radius: 5px;
+
 }
 
 .str-bar {
     font-weight: bolder;
+}
+
+.btn-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    color: #fefefe;
+    margin-top: 25px;
+    width: 90%;
+    height: 60px;
+    background: red;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 5px;
 }
