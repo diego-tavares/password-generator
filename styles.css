@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
 }
 
 body {
-    background-color: black;
+    background-color: #090909;
     color: #fefefe;
 }
 
@@ -13,9 +16,8 @@ body {
 header {    
     margin: 75px 0;
     text-align: center;
-    
-
 }
+
 .bx-lock-alt {
     font-size: xx-large;
 }
@@ -27,10 +29,9 @@ header {
 }
 
 .pwd-generated {
-    margin-top: 30px;
     width: 350px;
     height: 50px;
-    background: red;
+    background: #313131;
     border-radius: 5px;
     text-align: center;
     display: flex;
@@ -51,7 +52,7 @@ header {
 
 
 .pwd-configs {
-    background: rgb(0, 26, 255);
+    background: #313131;
     width: 350px;
     height: 500px;
     border-radius: 5px;
@@ -84,6 +85,9 @@ input {
     margin:10px 15px;
 }
 
+input[type="checkbox"]:checked{
+    accent-color: #7945F5;
+}
 .str-align {
     display: flex;
     align-items: center;
@@ -91,7 +95,7 @@ input {
 }
 
 .strenght {
-    background-color: blueviolet;
+    background-color: #454545;
     width: 90%;
     height: 60px;
     margin-top: 45px;
@@ -119,11 +123,15 @@ button {
     margin-top: 25px;
     width: 90%;
     height: 60px;
-    background: red;
+    background: #7945F5;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     border-radius: 5px;
+}
+
+button:hover {
+    background: #783CBD;
 }
