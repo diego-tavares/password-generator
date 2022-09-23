@@ -9,8 +9,11 @@ body {
     color: #fefefe;
 }
 
+
 header {    
+    margin-top: 20px;
     text-align: center;
+
 }
 .bx-lock-alt {
     font-size: xx-large;
@@ -32,6 +35,9 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    font-size: 20px;
 }
 
+.bx-copy {
+    font-size: xx-large;
+}
