@@ -1,7 +1,20 @@
+const pwdContainer = document.getElementById('pwd-generated');
+const pwdConfigs = document.getElementById('pwd-configs');
+const strBox = document.getElementById('strenght ');
+const btn = document.getElementById('btn');
+const label = document.getElementById('label');
 const checkbox = document.getElementById('dark-mode');
+
+
 
 checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark');
+  pwdContainer.classList.toggle('pwd-generated-alt');
+  pwdConfigs.classList.toggle('pwd-configs-alt');
+  strBox.classList.toggle('strenght-alt');
+  btn.classList.toggle('btn-alt');
+  label.classList.toggle('label-alt');
+  
 })
 
 const randomFunction = {

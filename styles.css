@@ -14,7 +14,7 @@ body {
 
 
 header {    
-    margin: 75px 0;
+    margin: 75px 0 0 0;
     text-align: center;
 }
 
@@ -23,6 +23,7 @@ header {
 }
 
 .pwd-container {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +43,7 @@ header {
 
 .bx-copy {
     font-size: xx-large;
+    cursor: pointer;
 }
 
 .main-container {
@@ -117,7 +119,6 @@ input[type="checkbox"]:checked{
     justify-content: center;
 }
 
-
 button {
     color: #fefefe;
     margin-top: 25px;
@@ -130,24 +131,64 @@ button {
     justify-content: center;
     font-size: 25px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
     background: #783CBD;
 }
 
+/* dark-mode toggle button */
+
+.dark-mode-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -690px;
+}
+
 body.dark {
-    background-color: #292c35;
+    background-color: #E8F1F2;
+    color: #090909;
   }
+
+.pwd-generated-alt {
+    background-color: #C8C6C4;
+    
+}
+
+.pwd-configs-alt {
+    background-color: #C8C6C4;
+}
+
+.strenght-alt {
+    background-color: #9e9e9e;
+}
+
+.label-alt {
+    background-color: #C8C6C4 !important;
+    
+}
+
+.btn-alt {
+    background-color: #B098C1;
+    color: #090909;
+}
+
+.btn-alt:hover {
+    background-color: #8D69a2;
+   
+}
+
   .dark-mode {
     opacity: 0;
     position: absolute;
   }
   
   .label {
-    width: 50px;
-    height: 26px;
-    background-color:#111;
+    background-color: #454545;
+    width: 80px;
+    height: 24px;
     display: flex;
     border-radius:50px;
     align-items: center;
@@ -155,28 +196,28 @@ body.dark {
     padding: 5px;
     position: relative;
     transform: scale(1.5);
+    cursor: pointer;
   }
-  
+
   .ball {
-    width: 20px;
+    width: 30px;
     height: 20px;
     background-color: #fefefe;
     position: absolute;
     top: 2px;
     left: 2px;
-    border-radius: 50%;
+    border-radius: 10px;
     transition: transform 0.2s linear;
   }
   
-  /*  target the elemenent after the label*/
   .dark-mode:checked + .label .ball{
-    transform: translateX(24px);
+    transform: translateX(45px);
   }
   
   .bxs-moon {
-    color: pink;
+    color: #fefefe;
   }
   
   .bxs-sun {
-    color: yellow;
+    color: gold;
   }
