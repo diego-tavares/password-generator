@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Password Geneator</title>
 </head>
 <body>
  <header>
+    
     <span>
      <i class='bx bx-lock-alt'><span> Password Generator</span></i>
     </span>
@@ -37,7 +38,7 @@
             <span class="symbols"><input type="checkbox">Include Symbols</span>
 
         </div>
-
+        
         <div class="str-align">
             <div class="strenght">
                 <span>Strength</span>
@@ -49,5 +50,13 @@
         </div>
     </div>
  </div>
+ <div>
+    <input type="checkbox" class="dark-mode" id="dark-mode">
+  <label for="dark-mode" class="label">
+    <i class='bx bxs-moon'></i>
+    <i class='bx bxs-sun'></i>
+    <div class='ball'>
+  </label>
+</div>
 </body>
 </html>
