@@ -5,8 +5,10 @@ const pwdConfigs = document.getElementById('pwd-configs');
 const strBox = document.getElementById('strenght ');
 const btn = document.getElementById('btn');
 const label = document.getElementById('label');
-const range = document.getElementById('range');
 const checkbox = document.getElementById('dark-mode');
+
+const range = document.getElementById('range');
+const chtLength = document.getElementById('cht-length');
 
 checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark');
@@ -17,6 +19,12 @@ checkbox.addEventListener('change', ()=>{
   label.classList.toggle('label-alt');
   range.classList.toggle('inputBarLength-alt');
   
+})
+
+chtLength.innerHTML = range.value;
+
+range.addEventListener('change', ()=>{
+  chtLength.innerHTML = range.value;
 })
 
 // Selectors
@@ -51,4 +59,14 @@ function randomSymbol() {
   return symbol;
 }
 
+
+btn.addEventListener('click', () =>{
+  password(
+    inputUpper.checked,
+    inputLower.checked,
+    inputNumber.checked,
+    inputSymbol.checked,
+    range.value
+  )
+})
 console.log(randomSymbol())
