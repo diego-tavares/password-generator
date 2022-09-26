@@ -1,11 +1,11 @@
+// Dark mode
+
 const pwdContainer = document.getElementById('pwd-generated');
 const pwdConfigs = document.getElementById('pwd-configs');
 const strBox = document.getElementById('strenght ');
 const btn = document.getElementById('btn');
 const label = document.getElementById('label');
 const checkbox = document.getElementById('dark-mode');
-
-
 
 checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark');
@@ -16,6 +16,13 @@ checkbox.addEventListener('change', ()=>{
   label.classList.toggle('label-alt');
   
 })
+
+// Seletores
+
+const inputUpper = document.getElementById('uppercase');
+const inputLower = document.getElementById('lowercase');
+const inputNumber = document.getElementById('number');
+const inputSymbol = document.getElementById('symbols');
 
 const randomFunction = {
   lower: randomLower,
