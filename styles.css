@@ -48,6 +48,19 @@ header {
     cursor: pointer;
 }
 
+.inputBarLength {
+    width: 300px;
+    outline: none;
+    accent-color: #7945F5;
+    border-color: #7945F5;
+}
+
+.inputBarLength-alt {
+    accent-color: #B098C1;
+    border-color: #B098C1;
+    color: #fefefe;
+}
+
 .main-container {
     display: flex;
     justify-content: center;

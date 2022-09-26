@@ -5,6 +5,7 @@ const pwdConfigs = document.getElementById('pwd-configs');
 const strBox = document.getElementById('strenght ');
 const btn = document.getElementById('btn');
 const label = document.getElementById('label');
+const range = document.getElementById('range');
 const checkbox = document.getElementById('dark-mode');
 
 checkbox.addEventListener('change', ()=>{
@@ -14,10 +15,11 @@ checkbox.addEventListener('change', ()=>{
   strBox.classList.toggle('strenght-alt');
   btn.classList.toggle('btn-alt');
   label.classList.toggle('label-alt');
+  range.classList.toggle('inputBarLength-alt');
   
 })
 
-// Seletores
+// Selectors
 
 const inputUpper = document.getElementById('uppercase');
 const inputLower = document.getElementById('lowercase');
