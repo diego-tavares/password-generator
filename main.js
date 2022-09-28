@@ -70,13 +70,45 @@ function randomSymbol() {
 }
 
 
-btn.addEventListener('click', () =>{
-  password(
-    inputUpper.checked,
-    inputLower.checked,
-    inputNumber.checked,
-    inputSymbol.checked,
-    range.value
-  )
-})
 console.log(randomSymbol())
+
+
+btn.addEventListener('click', () => {
+	const length = +range.value;
+	const hasUpper = inputUpper.checked;
+	const hasLower = inputLower.checked;
+	const hasNumber = inputNumber.checked;
+	const hasSymbol = inputSymbol.checked;
+	
+	pwdContainer.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+
+
+
+function generatePassword(lower, upper, number, symbol, range) {
+	const generatedPassword = '';
+	const typesCount = lower + upper + number + symbol;
+	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+	
+	// Doesn't have a selected type
+	if(typesCount === 0) {
+		return '';
+	}
+	
+	// create a loop
+	for(let i=0; i<range; i+=typesCount) {
+		typesArr.forEach(type => {
+			const funcName = Object.keys(type)[0];
+			generatedPassword += randomFunction[funcName]();
+		});
+	}
+	
+	const finalPassword = generatedPassword.slice(0, range);
+	
+	return finalPassword;
+}
+
+function testeRange () {
+  return console.log(range.value);
+
+}
