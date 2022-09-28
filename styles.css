@@ -105,6 +105,21 @@ input {
 input[type="checkbox"]:checked{
     accent-color: #7945F5;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+
+  transition: .2s ease-in-out;
+}  
+
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+}
+ 
 .str-align {
     display: flex;
     align-items: center;
