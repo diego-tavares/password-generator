@@ -21,27 +21,20 @@ checkbox.addEventListener('change', ()=>{
   
 })
 
- chtLength.innerHTML = range.value;
+chtLength.innerHTML = range.value;
 
- range.addEventListener('change',  ()=>{
-    chtLength.innerHTML = range.value;
+  range.addEventListener('change',  ()=>{
+     chtLength.innerHTML = range.value;
     
     
-  })
-  
-  var rangeValue = function(){
-  var newValue = range.value;
-  var target = document.querySelector('.chtLength');
-  target.innerHTML = newValue;
+   })
+
+rangeValue = function(){
+  const newValue = range.value;
+  chtLength.innerHTML = newValue;
 }
 
 range.addEventListener("input", rangeValue);
-
-// function rangeSlide(value) {
-//   document.getElementById('range').innerHTML = value;
-//   onchange='range(this.value)';
-//   onmousemove='range(this.value)';
-// }
 
 // Selectors
 
