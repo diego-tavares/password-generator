@@ -21,18 +21,19 @@ checkbox.addEventListener('change', ()=>{
   
 })
 
+
+// Range bar
+
 chtLength.innerHTML = range.value;
 
   range.addEventListener('change',  ()=>{
      chtLength.innerHTML = range.value;
-    
-    
-   })
+  })
 
-rangeValue = function(){
-  const newValue = range.value;
-  chtLength.innerHTML = newValue;
-}
+  function rangeValue() {
+    const newValue = range.value;
+    chtLength.innerHTML = newValue;
+  }
 
 range.addEventListener("input", rangeValue);
 
