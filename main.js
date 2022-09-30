@@ -82,3 +82,5 @@ btn.addEventListener('click', () => {
 	
 	pwdContainer.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
+
+
