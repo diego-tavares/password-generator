@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="main.js" defer></script>
     <title>Password Geneator</title>
 </head>
 <body>
- <header>
-    
-    <span>
-     <i class='bx bx-lock-alt'><span> Password Generator</span></i>
-    </span>
+    <header>
+        
+        <span>
+            <i class='bx bx-lock-alt'><span> Password Generator</span></i>
+        </span>
     </header>   
- <div class="pwd-container">
-    <div class="pwd-generated" id="pwd-generated">
-        <span>Password Generated</span>
-        <span class="copy"><i class='bx bx-copy' ></i></span>
+    <div class="pwd-container">
+        <div class="pwd-generated" id="pwd-generated">
+            <span id="pwd">Password Generated</span>
+            <span class="copy"><i class='bx bx-copy' ></i></span>
+        </div>
     </div>
-</div>
-<div class="main-container">
-    <div class="pwd-configs" id="pwd-configs">
+    <div class="main-container">
+        <div class="pwd-configs" id="pwd-configs">
             <div class="length">
                 <span>Character Length</span>
-                <span class="cht-length" id="cht-length">00</span>
+                <span class="cht-length" id="cht-length">8</span>
             </div>
             
             <input type="range" min="8" max="20" step="1" value="8" class="inputBarLength" id="range">
-        <div class="boxes">
-
-            <span class="uppercase" id="uppercase"><input type="checkbox">Include Uppercase Letters</span>
-            <span class="lowercase" id="lowercase"><input type="checkbox">Include Lowercase Letter</span>
-            <span class="number" id="number"><input type="checkbox">Include Numbers</span>
-            <span class="symbols" id="symbols"><input type="checkbox">Include Symbols</span>
-
+            <div class="boxes">
+                
+                <span class="uppercase"><input type="checkbox" id="uppercase">Include Uppercase Letters</span>
+                <span class="lowercase"><input type="checkbox" id="lowercase">Include Lowercase Letter</span>
+                <span class="number"><input type="checkbox" id="number">Include Numbers</span>
+                <span class="symbols"><input type="checkbox" id="symbols">Include Symbols</span>
+                
+            </div>
+            
+            <div class="str-align">
+                <div class="strenght" id="strenght ">
+                    <span>Strength</span>
+                    <span class="str-bar">| | | | |</span>
+                </div>
+            </div>
+            <div class="btn-align">
+                <button id="btn">Generate<i class='bx bx-lock-alt'></i></button>
+            </div>
+            
         </div>
-        
-        <div class="str-align">
-            <div class="strenght" id="strenght ">
-                <span>Strength</span>
-                <span class="str-bar">| | | | |</span>
+    </div>
+    <div class="dark-mode-align">
+        <div>
+            <input type="checkbox" class="dark-mode" id="dark-mode">
+            <label for="dark-mode" class="label" id="label">
+                <i class='bx bxs-moon'></i>
+                <i class='bx bxs-sun'></i>
+                <div class='ball'>
+                </label>
             </div>
         </div>
-        <div class="btn-align">
-            <button id="btn">Generate<i class='bx bx-lock-alt'></i></button>
-        </div>
-       
-    </div>
- </div>
- <div class="dark-mode-align">
- <div>
-    <input type="checkbox" class="dark-mode" id="dark-mode">
-  <label for="dark-mode" class="label" id="label">
-    <i class='bx bxs-moon'></i>
-    <i class='bx bxs-sun'></i>
-    <div class='ball'>
-  </label>
-</div>
-</div>
-</body>
-</html>
+    </body>
+    </html>
