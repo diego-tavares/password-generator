@@ -39,48 +39,83 @@ range.addEventListener("input", rangeValue);
 
 // Selectors
 
+const pwd = document.getElementById('pwd');
 const inputUpper = document.getElementById('uppercase');
 const inputLower = document.getElementById('lowercase');
 const inputNumber = document.getElementById('number');
 const inputSymbol = document.getElementById('symbols');
 
-const randomFunction = {
-  lower: randomLower,
-  upper: randomUpper,
-  number: randomNumber,
-  symbol: randomSymbol,
+const randomLower = 'abcdefghijklmnopqrstuvvwxyz';
+const randomUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const randomNumber = '0123456789';
+const randomSymbol = '!@#$%¨&*()_-+='
+
+  function getLower () { 
+    return randomLower[Math.floor(Math.random() * randomLower.length)]
+  }
+  
+  function getUpper () { 
+    return randomUpper[Math.floor(Math.random() * randomUpper.length)]
+  }
+  
+  function getNumber () { 
+    return randomNumber[Math.floor(Math.random() * randomNumber.length)]
+  }
+  
+  function getSymbol () { 
+    return randomSymbol[Math.floor(Math.random() * randomSymbol.length)];
+  }
+                     
+
+function generatePassword() {
+  const lenNew = range.value;
+
+  let pass = "";
+
+  if (inputNumber.checked) {
+    pass += getNumber();
+  }
+  if (inputLower.checked) {
+    pass += getLower();
+  }
+  if (inputUpper.checked) {
+    pass += getUpper();
+  }
+  if (inputSymbol.checked) {
+    pass += getSymbol();
+  }
+
+  for (let i = pass.length; i < lenNew; i++){
+    const x = generateX();
+    pass += x;
+  }
+  
+  pwd.innerText = pass;
 }
 
-function randomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+function generateX () {
+  const xs = [];
+
+  if(inputLower.checked){
+    xs.push(getLower());
+  }
+  
+  if(inputNumber.checked){
+    xs.push(getNumber());
+  }
+  
+  if(inputSymbol.checked){
+    xs.push(getSymbol());
+  }
+  
+  if(inputUpper.checked){
+    xs.push(getUpper());
+  }
+
+  if(xs.length === 0) return "";
+
+  return xs[Math.floor(Math.random() * xs.length)];
 }
 
-function randomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-
-function randomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-function randomSymbol() {
-  listSymbol = ['!', '@', '#', '$', '%', '^', '&', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '?'];
-  symbol = listSymbol[Math.floor(Math.random() * listSymbol.length)];
-  return symbol;
-}
-
-
-console.log(randomSymbol())
-
-
-btn.addEventListener('click', () => {
-	const length = +range.value;
-	const hasUpper = inputUpper.checked;
-	const hasLower = inputLower.checked;
-	const hasNumber = inputNumber.checked;
-	const hasSymbol = inputSymbol.checked;
-	
-	pwdContainer.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
-});
-
+btn.addEventListener("click", generatePassword);
 
