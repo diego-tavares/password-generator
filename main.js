@@ -82,8 +82,3 @@ btn.addEventListener('click', () => {
 	
 	pwdContainer.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
-
-function testeRange () {
- 
-  return console.log(range.value)
-}
