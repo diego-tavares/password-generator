@@ -165,7 +165,7 @@ function strColor () {
   
 let strValue = strValidation();
 
-  if (strValue === 0||strValue === 2) {
+  if (strValue === 1||strValue === 2) {
     strBar.innerHTML = '<span class="red bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span>'
     
   } 
@@ -182,9 +182,19 @@ let strValue = strValidation();
   return console.log(strValidation())
 
 }
+function cst (e) {
+if (inputUpper.checked) {
+  e = 1
+};
+if (inputLower.checked) {
+  e
+};
+inputNumber;
+inputSymbol;
+}
+  
+const chkBox = document.querySelectorAll('input[type=checkbox]') ;
 
-const validation = strValidation()
-const validation2 = console.log(validation)
-
-/* 
-btn.addEventListener("click", strColor); */
+for (var i = 0; i < chkBox.length; i++) {
+  chkBox[i].addEventListener('change', strColor);
+}
