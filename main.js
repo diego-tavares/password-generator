@@ -28,6 +28,7 @@ chtLength.innerHTML = range.value;
 
   range.addEventListener('change',  ()=>{
      chtLength.innerHTML = range.value;
+     strColor();
   })
 
   function rangeValue() {
@@ -117,8 +118,11 @@ function generateX () {
   return xs[Math.floor(Math.random() * xs.length)];
 }
 
-btn.addEventListener("click", generatePassword);
+btn.addEventListener("click", () => {
 
+ generatePassword();
+ strColor();
+})
 
 // Strenght Bar
 
@@ -159,9 +163,9 @@ function strValidation () {
 
 function strColor () {
   
-strValue = strValidation();
+let strValue = strValidation();
 
-  if (strValue === 1||strValue === 2) {
+  if (strValue === 0||strValue === 2) {
     strBar.innerHTML = '<span class="red bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span>'
     
   } 
@@ -179,4 +183,8 @@ strValue = strValidation();
 
 }
 
-btn.addEventListener("click", strColor);
+const validation = strValidation()
+const validation2 = console.log(validation)
+
+/* 
+btn.addEventListener("click", strColor); */

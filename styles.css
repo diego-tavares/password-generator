@@ -143,6 +143,18 @@ input[type="range"]::-webkit-slider-thumb:hover {
     font-weight: bolder;
 }
 
+.red {
+    color: rgb(236, 65, 65) !important;
+}
+
+.yellow {
+    color: rgb(236, 236, 27) !important;
+}
+
+.green {
+    color: rgb(45, 247, 45) !important;
+}
+
 .btn-align {
     display: flex;
     align-items: center;
@@ -182,17 +194,17 @@ body.dark {
     color: #090909;
   }
 
-.pwd-generated-alt {
-    background: #C8C6C4;
+  .pwd-generated-alt {
+      background: #C8C6C4;
+      
+    }
     
-}
-
-.pwd-configs-alt {
-    background: #C8C6C4;
-}
-
-.strenght-alt {
-    background: #9e9e9e;
+    .pwd-configs-alt {
+        background: #C8C6C4;
+    }
+    
+    .strenght-alt {
+        background: #9e9e9e;
 }
 
 .label-alt {
@@ -207,59 +219,48 @@ body.dark {
 
 .btn-alt:hover {
     background: #8D69a2;
-   
+    
 }
 
-  .dark-mode {
+.dark-mode {
     opacity: 0;
     position: absolute;
-  }
+}
   
   .label {
-    background: #454545;
-    width: 80px;
-    height: 24px;
-    display: flex;
-    border-radius:50px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    transform: scale(1.5);
-    cursor: pointer;
-  }
-
-  .ball {
-    width: 30px;
-    height: 20px;
-    background: #fefefe;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border-radius: 10px;
-    transition: transform 0.2s linear;
-  }
-  
-  .dark-mode:checked + .label .ball{
-    transform: translateX(45px);
-  }
-  
-  .bxs-moon {
-    color: #fefefe;
-  }
-  
-  .bxs-sun {
-    color: gold;
-  }
-
-.red {
-    color: red !important;
-}
-
-.yellow {
-    color: gold !important;
-}
-
-.green {
-    color: green !important;
-}
+      background: #454545;
+      width: 80px;
+      height: 24px;
+      display: flex;
+      border-radius:50px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      transform: scale(1.5);
+      cursor: pointer;
+    }
+    
+    .ball {
+        width: 30px;
+        height: 20px;
+        background: #fefefe;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 10px;
+        transition: transform 0.2s linear;
+    }
+    
+    .dark-mode:checked + .label .ball{
+        transform: translateX(45px);
+    }
+    
+    .bxs-moon {
+        color: #fefefe;
+    }
+    
+    .bxs-sun {
+        color: gold;
+    }
+    
