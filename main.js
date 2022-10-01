@@ -124,6 +124,7 @@ btn.addEventListener("click", () => {
  strColor();
 })
 
+
 // Strenght Bar
 
 const strBar = document.getElementById('str-bar');
@@ -183,14 +184,14 @@ let strValue = strValidation();
 
 }
 function cst (e) {
-if (inputUpper.checked) {
-  e = 1
-};
-if (inputLower.checked) {
-  e
-};
-inputNumber;
-inputSymbol;
+  if (inputUpper.checked) {
+    e = 1
+  };
+  if (inputLower.checked) {
+    e
+  };
+  inputNumber;
+  inputSymbol;
 }
   
 const chkBox = document.querySelectorAll('input[type=checkbox]') ;
@@ -198,3 +199,18 @@ const chkBox = document.querySelectorAll('input[type=checkbox]') ;
 for (var i = 0; i < chkBox.length; i++) {
   chkBox[i].addEventListener('change', strColor);
 }
+
+//Copy Button
+
+const copy = document.getElementById('copy');
+
+
+function copyEl() {
+  
+  var copyPwd = pwd.innerText;
+  
+  navigator.clipboard.writeText(copyPwd);
+  alert ('Copyed to clipboard!')
+}
+
+copy.addEventListener('click', copyEl)
