@@ -38,6 +38,7 @@ chtLength.innerHTML = range.value;
 
 range.addEventListener("input", rangeValue);
 
+
 // Selectors
 
 const pwd = document.getElementById('pwd');
@@ -51,24 +52,25 @@ const randomUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const randomNumber = '0123456789';
 const randomSymbol = '!@#$%¨&*()_-+='
 
-  function getLower () { 
+function getLower () { 
     return randomLower[Math.floor(Math.random() * randomLower.length)]
-  }
+}
   
-  function getUpper () { 
+function getUpper () { 
     return randomUpper[Math.floor(Math.random() * randomUpper.length)]
-  }
+}
   
-  function getNumber () { 
+function getNumber () { 
     return randomNumber[Math.floor(Math.random() * randomNumber.length)]
-  }
+}
   
-  function getSymbol () { 
+function getSymbol () { 
     return randomSymbol[Math.floor(Math.random() * randomSymbol.length)];
-  }
+}
                      
 
 function generatePassword() {
+
   const lenNew = range.value;
 
   let pass = "";
@@ -76,12 +78,15 @@ function generatePassword() {
   if (inputNumber.checked) {
     pass += getNumber();
   }
+
   if (inputLower.checked) {
     pass += getLower();
   }
+  
   if (inputUpper.checked) {
     pass += getUpper();
   }
+  
   if (inputSymbol.checked) {
     pass += getSymbol();
   }
@@ -92,9 +97,11 @@ function generatePassword() {
   }
   
   pwd.innerText = pass;
+
 }
 
 function generateX () {
+
   const xs = [];
 
   if(inputLower.checked){
@@ -116,10 +123,10 @@ function generateX () {
   if(xs.length === 0) return "";
 
   return xs[Math.floor(Math.random() * xs.length)];
+
 }
 
-btn.addEventListener("click", () => {
-
+btn.addEventListener('click', () => {
  generatePassword();
  strColor();
 })
@@ -128,7 +135,6 @@ btn.addEventListener("click", () => {
 // Strenght Bar
 
 const strBar = document.getElementById('str-bar');
-
 const red = document.getElementById('red');
 const yellow = document.getElementById('yellow');
 const green = document.getElementById('green');
@@ -164,36 +170,22 @@ function strValidation () {
 
 function strColor () {
   
-let strValue = strValidation();
+  let strValue = strValidation();
 
   if (strValue === 1||strValue === 2) {
     strBar.innerHTML = '<span class="red bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span>'
-    
   } 
+  
   if (strValue === 3 || strValue === 4) {
     strBar.innerHTML = '<span class="yellow"><span class="bx bxs-label"></span><span class="bx bxs-label"></span></span><span class="bx bxs-label"></span>'
-  
   } 
 
   if (strValue > 4) {
     strBar.innerHTML = '<span class="green"><span class="bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span></span>'
-  
   } 
 
-  return console.log(strValidation())
+}
 
-}
-function cst (e) {
-  if (inputUpper.checked) {
-    e = 1
-  };
-  if (inputLower.checked) {
-    e
-  };
-  inputNumber;
-  inputSymbol;
-}
-  
 const chkBox = document.querySelectorAll('input[type=checkbox]') ;
 
 for (var i = 0; i < chkBox.length; i++) {
@@ -204,13 +196,12 @@ for (var i = 0; i < chkBox.length; i++) {
 
 const copy = document.getElementById('copy');
 
-
 function copyEl() {
   
   var copyPwd = pwd.innerText;
   
   navigator.clipboard.writeText(copyPwd);
-  alert ('Copyed to clipboard!')
+  alert ('Copied to clipboard!')
 }
 
 copy.addEventListener('click', copyEl)
