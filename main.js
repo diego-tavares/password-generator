@@ -119,3 +119,54 @@ function generateX () {
 
 btn.addEventListener("click", generatePassword);
 
+
+// Strenght Bar
+
+const strBar = document.getElementById('str-bar');
+
+function strValidation () {
+
+  let strValue = 0;
+
+  if (inputLower.checked) {
+    strValue += 1;
+  }
+  
+  if (inputNumber.checked) {
+    strValue += 1;
+  } 
+  
+  if (inputSymbol.checked) {
+    strValue += 1;
+  }
+  
+  if (inputUpper.checked) {
+    strValue += 1;
+  }
+
+  if (range.value > 10) {
+    strValue += 1;
+  }
+
+  
+}
+
+function strColor () {
+  if (strValue = 1) {
+    strBar.innerHTML = '<span style = "color:red">';
+    /* strBar.classList.toggle = */
+
+  } 
+  if (strValue = 2) {
+    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+  } 
+  if (strValue = 3) {
+    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+  } 
+  if (strValue = 4) {
+    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+  } 
+  if (strValue = 5) {
+    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+  } 
+}
