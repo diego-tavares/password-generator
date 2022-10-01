@@ -124,6 +124,11 @@ btn.addEventListener("click", generatePassword);
 
 const strBar = document.getElementById('str-bar');
 
+const red = document.getElementById('red');
+const yellow = document.getElementById('yellow');
+const green = document.getElementById('green');
+
+
 function strValidation () {
 
   let strValue = 0;
@@ -148,25 +153,30 @@ function strValidation () {
     strValue += 1;
   }
 
+  return strValue
   
 }
 
 function strColor () {
-  if (strValue = 1) {
-    strBar.innerHTML = '<span style = "color:red">';
-    /* strBar.classList.toggle = */
+  
+strValue = strValidation();
 
+  if (strValue === 1||strValue === 2) {
+    strBar.innerHTML = '<span class="red bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span>'
+    
   } 
-  if (strValue = 2) {
-    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+  if (strValue === 3 || strValue === 4) {
+    strBar.innerHTML = '<span class="yellow"><span class="bx bxs-label"></span><span class="bx bxs-label"></span></span><span class="bx bxs-label"></span>'
+  
   } 
-  if (strValue = 3) {
-    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
+
+  if (strValue > 4) {
+    strBar.innerHTML = '<span class="green"><span class="bx bxs-label"></span><span class="bx bxs-label"></span><span class="bx bxs-label"></span></span>'
+  
   } 
-  if (strValue = 4) {
-    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
-  } 
-  if (strValue = 5) {
-    strBar.innerHTML = '<span style = "color:red">|</span><span> | | | |</span>';
-  } 
+
+  return console.log(strValidation())
+
 }
+
+btn.addEventListener("click", strColor);

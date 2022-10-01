@@ -251,3 +251,15 @@ body.dark {
   .bxs-sun {
     color: gold;
   }
+
+.red {
+    color: red !important;
+}
+
+.yellow {
+    color: gold !important;
+}
+
+.green {
+    color: green !important;
+}
