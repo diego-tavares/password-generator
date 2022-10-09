@@ -3,11 +3,11 @@
 - O projeto encontra-se responsivo em todas as plataformas e foi desenvolvido em mobile first
 
 Para utilizar é bem simples, basta abrir o deploy <a href="https://diego-tavares.github.io/password-generator/">Aqui </a> e já começar a executar.
-Embora o projeto esteja em inglês, existe um botão no canto superior direito que você poderá escolher seu idioma, caso seja necessário.
-Por padrão, aderi o inglês como idioma para a primeira visualização.
 
-- O projeto também conta um botão "dark-mode" para alterar entre o tema claro e escuro.
+- O projeto conta um botão "dark-mode" para alterar entre o tema claro e escuro.
 Por padrão, aderi ao tema escuro para a primeira visualização.
+
+![Dark-mode gif](https://media.giphy.com/media/OMEM5tZPR9vQafO7r4/giphy.gif)
 
 - Neste código, certamente o maior desafio que tive foi DOM, porém através de algumas pesquisas no <a href="github.com">Github</a>, <a href="stackoverflow.com">Stack Overflow</a> e outros fóruns, consegui sanar minhas dúvidas recorrentes à este tópico.
 
