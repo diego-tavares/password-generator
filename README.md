@@ -9,7 +9,7 @@ Por padrão, aderi o inglês como idioma para a primeira visualização.
 - O projeto também conta um botão "dark-mode" para alterar entre o tema claro e escuro.
 Por padrão, aderi ao tema escuro para a primeira visualização.
 
-- Neste código, certamente o maior desafio que tive foi DOM, porém através de algumas pesquisas no <a href="github.com">Github</a>, <a href="stackoverflow.com">Stack Overflow</a> e outros, consegui sanar minhas dúvidas recorrentes à este tópico.
+- Neste código, certamente o maior desafio que tive foi DOM, porém através de algumas pesquisas no <a href="github.com">Github</a>, <a href="stackoverflow.com">Stack Overflow</a> e outros fóruns, consegui sanar minhas dúvidas recorrentes à este tópico.
 
 Foi gratificante realizar esse projeto desafiador.
 
