@@ -1,5 +1,5 @@
-### GERADOR DE SENHAS
-## Este projeto tem como objetivo criar senhas aleatórias para que você utilize da melhor forma possível.
+## GERADOR DE SENHAS
+# Este projeto tem como objetivo criar senhas aleatórias para que você utilize da melhor forma possível.
 
 - O projeto encontra-se responsivo em todas as plataformas e foi desenvolvido em mobile first
 
